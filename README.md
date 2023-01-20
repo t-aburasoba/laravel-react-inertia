@@ -1,5 +1,7 @@
 ## Laravel Breeze × Inertia.js × React(TypeScript) Template
 
+WIP
+
 ## Quick start
 
 `git clone`
@@ -9,6 +11,8 @@
 `npm install`
 
 `sail up -d`
+
+`sail artisan migrate`
 
 `npm run dev`
 
