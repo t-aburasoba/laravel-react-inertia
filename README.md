@@ -21,15 +21,18 @@ access localhost
 PHP
 TypeScript
 
-## Framework
+### Framework
 
 Laravel v9.48.0
-React v18.0.0
-react-router-dom v6.3.0
-UI
+React v18.2.0
+
+### UI
+
 TailwindCSS
-Compiler
-Vite
+
+### Compiler
+
+Vite v4.0.4
 
 ## License
 
