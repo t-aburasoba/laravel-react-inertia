@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,9 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('/tasks', [TaskController::class, 'index'])->middleware(['auth', 'verified'])->name('tasks.index');
+Route::post('/tasks', [TaskController::class, 'store'])->middleware(['auth', 'verified'])->name('tasks.store');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
