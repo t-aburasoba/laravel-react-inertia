@@ -9,13 +9,15 @@ type Props = {
 }
 
 const Index: FC<Props> = ({ tasks }) => {
-  const { data, setData, post, processing, errors } = useForm({
+  const { data, setData, post, processing, errors, isDirty } = useForm({
     name: '',
   })
 
   const submit = (e: SyntheticEvent) => {
     e.preventDefault()
-    post('/tasks')
+    post('/tasks', {
+      onSuccess: () => setData('name', ''),
+    })
   }
   return (
     <Layout>
@@ -31,6 +33,7 @@ const Index: FC<Props> = ({ tasks }) => {
               onChange={(e) => setData('name', e.target.value)}
             />
             {errors.name && <div>{errors.name}</div>}
+            {isDirty && <div>There are unsaved form changes.</div>}
             <Button variant="contained" type="submit" disabled={processing}>
               Add
             </Button>
