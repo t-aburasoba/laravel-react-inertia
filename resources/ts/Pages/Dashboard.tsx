@@ -1,24 +1,11 @@
-import { TextField, Typography } from '@mui/material'
+import { Link } from '@inertiajs/react'
 import Layout from '../Layouts/Layout'
 
 const Dashboard = () => {
   return (
     <>
       <Layout>
-        <>
-          <Typography variant="h6" gutterBottom>
-            Tasks
-          </Typography>
-          <TextField
-            required
-            id="firstName"
-            name="firstName"
-            label="First name"
-            fullWidth
-            autoComplete="given-name"
-            variant="standard"
-          />
-        </>
+        <Link href="/tasks">Tasks</Link>
       </Layout>
     </>
   )
