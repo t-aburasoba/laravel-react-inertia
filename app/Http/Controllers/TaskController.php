@@ -25,7 +25,10 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Task::create($request->validate([
+            'name' => ['required', 'max:10'],
+          ]));
+          return to_route('tasks.index');
     }
 
     /**
