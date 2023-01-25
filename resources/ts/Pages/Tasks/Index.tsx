@@ -2,11 +2,7 @@ import { useForm } from '@inertiajs/react'
 import { FormControl, InputLabel, Input, Button } from '@mui/material'
 import { FC, SyntheticEvent } from 'react'
 import Layout from '../../Layouts/Layout'
-
-type Task = {
-  id: number
-  name: string
-}
+import { Task } from '../../Types/Task'
 
 type Props = {
   tasks: Task[]
