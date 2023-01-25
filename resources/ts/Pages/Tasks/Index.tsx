@@ -1,6 +1,7 @@
 import { useForm } from '@inertiajs/react'
 import { FormControl, InputLabel, Input, Button } from '@mui/material'
 import { FC, SyntheticEvent } from 'react'
+import TaskList from '../../Components/Tasks/TaskList'
 import Layout from '../../Layouts/Layout'
 import { Task } from '../../Types/Task'
 
@@ -39,11 +40,7 @@ const Index: FC<Props> = ({ tasks }) => {
             </Button>
           </FormControl>
         </form>
-        <ul>
-          {tasks.map((task) => (
-            <li key={task.id}>{task.name}</li>
-          ))}
-        </ul>
+        <TaskList tasks={tasks} />
       </>
     </Layout>
   )
