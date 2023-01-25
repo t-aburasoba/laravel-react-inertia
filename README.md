@@ -1,4 +1,4 @@
-## Laravel Breeze × Inertia.js × React(TypeScript) Template
+## Laravel × Inertia.js × React(TypeScript) Template
 
 WIP
 
